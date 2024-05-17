@@ -65,7 +65,7 @@
   tasks:
     - name: copy files to the postgresql node
       ansible.builtin.copy:
-        src: /home/ec2-user/ansible-project/postgres/
+        src: /home/ec2-user/ansible/ansible-project/postgres/
         dest: "{{ container_path }}"
 
     - name: remove {{ container_name }} container
@@ -118,7 +118,7 @@
   tasks:
     - name: copy files to the nodejs node
       copy:
-        src: /home/ec2-user/ansible-project/nodejs/
+        src: /home/ec2-user/ansible/ansible-project/nodejs/
         dest: "{{ container_path }}"
 
     - name: remove {{ container_name }} container
@@ -167,7 +167,7 @@
   tasks:
     - name: copy files to the react node
       copy:
-        src: /home/ec2-user/ansible-project/react/
+        src: /home/ec2-user/ansible/ansible-project/react/
         dest: "{{ container_path }}"
 
     - name: remove {{ container_name }} container
